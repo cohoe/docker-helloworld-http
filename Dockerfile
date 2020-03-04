@@ -10,11 +10,12 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY main.sh /
-RUN mkdir /www
+RUN mkdir -m 0775 /www
 
-EXPOSE 80
+EXPOSE 8080
 
 WORKDIR /www
 
+USER 1001
 ENTRYPOINT ["/main.sh"]
 
