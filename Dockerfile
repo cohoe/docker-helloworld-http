@@ -9,6 +9,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+COPY server.py /
 COPY main.sh /
 RUN mkdir -m 0775 /www
 

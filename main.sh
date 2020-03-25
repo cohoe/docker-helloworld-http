@@ -2,4 +2,4 @@
 
 echo "<html><head><title>HTTP Hello World</title></head><body><h1>Hello from $(hostname)</h1></body></html>" > /www/index.html
 
-python -m SimpleHTTPServer 8080
+python /server.py 8080
